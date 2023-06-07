@@ -31,7 +31,7 @@
 .video {
   z-index: 2000 !important;
   position: relative !important;
-  height: 729px;
+  height: 100vh;
 }
 
 .footer-capa {
@@ -42,30 +42,62 @@
   font-weight: 600;
   background-color: black !important;
   bottom: 0;
+  width: 100%;
 }
 
 .popup {
   position: absolute;
   top: 0;
   left: 0;
-  width: 170px;
-  height: 100px;
   background-color: black;
-  padding: 10px;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   z-index: 9999;
+  color: red;
+  text-align: center;
+  vertical-align: middle;
+  display: table;
+  font-weight: 700;
   box-shadow:
     0 0 10px 4px #1d0000,  /* gray */
     0 0 20px 8px rgb(134, 7, 7), /* white */
     0 0 30px 12px rgb(242, 19, 19); /* red */
 }
 
+.popup-xs {
+  font-size: 16px;
+  width: 170px;
+  height: 100px; 
+}
+
+.popup-sm {
+  font-size: 24px;
+  width: 255px;
+  height: 150px;
+}
+
+.popup-md {
+  font-size: 32px;
+  width: 340px;
+  height: 200px;
+}
+
+.popup-lg {
+  font-size: 40px;
+  width: 425px;
+  height: 250px;
+}
+
+.popup-xl {
+  font-size: 48px;
+  width: 510px;
+  height: 300px;
+}
+
 .popup-text {
-  color: red;
-  text-align: center;
-  font-weight: 700;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .close {
@@ -103,7 +135,7 @@ body {
   background-image: url("https://i.pinimg.com/564x/4a/48/ef/4a48ef17ad715db3bb50051a96d609ff.jpg");
 	height: 100vh;
 	margin: 0px;
-	overflow: hidden;
+	overflow: auto;
 }
 
 .image {

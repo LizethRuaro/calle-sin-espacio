@@ -21,7 +21,7 @@
 </head>
 
 <body> <!--no mover este body-->
-  <div class="container">
+  <div>
     <h1 id="titulo">CALLE SIN ESPACIO</h1>
 
     <div class="alert alert-danger alert-dismissible style-button">
@@ -49,7 +49,7 @@
     </div>
 
     <!--footer>-->
-    <div class="container p-5 text-white footer-capa">
+    <div class="p-5 text-white footer-capa">
       <p>CALLE SIN ESPACIO</p>
       <p>Paulina Arias, Lizeth Ruaro</p>
       <p>Universidad Autónoma Metropolitana - Unidad Lerma</p>
@@ -68,7 +68,7 @@
 
     function createPopup() {
       let popup = document.createElement('div');
-      popup.className = 'popup';
+      popup.classList.add('popup', getRandomClassName());
       popup.style.top = Math.floor(Math.random() * window.innerHeight) + 'px';
       popup.style.left = Math.floor(Math.random() * window.innerWidth) + 'px';
 
@@ -87,6 +87,19 @@
       popup.appendChild(close);
       popup.appendChild(content);
       document.body.appendChild(popup);
+    }
+
+    function getRandomClassName() {
+      const classNames = [
+        'popup-xs',
+        'popup-sm',
+        'popup-md',
+        'popup-lg',
+        'popup-xl',
+      ];
+
+      let randomIndex = Math.floor(Math.random() * classNames.length);
+      return classNames[randomIndex];
     }
 
     function getRandomText() {
@@ -116,7 +129,7 @@
       }
     }
 
-    createRandomPopups(50);
+    createRandomPopups(80);
 
     const images = document.getElementsByClassName("image");
 
